@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zly.dao.ItemParamValueMapper">
+  <resultMap id="BaseResultMap" type="com.zly.model.ItemParamValue">
+    <constructor>
+      <idArg column="item_id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <idArg column="param_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="param_value" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    item_id, param_id, param_value
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.zly.model.ItemParamValueKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_item_param_value
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.zly.model.ItemParamValueKey">
+    delete from tb_item_param_value
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zly.model.ItemParamValue">
+    insert into tb_item_param_value (item_id, param_id, param_value
+      )
+    values (#{itemId,jdbcType=BIGINT}, #{paramId,jdbcType=INTEGER}, #{paramValue,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zly.model.ItemParamValue">
+    insert into tb_item_param_value
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="itemId != null">
+        item_id,
+      </if>
+      <if test="paramId != null">
+        param_id,
+      </if>
+      <if test="paramValue != null">
+        param_value,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="itemId != null">
+        #{itemId,jdbcType=BIGINT},
+      </if>
+      <if test="paramId != null">
+        #{paramId,jdbcType=INTEGER},
+      </if>
+      <if test="paramValue != null">
+        #{paramValue,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zly.model.ItemParamValue">
+    update tb_item_param_value
+    <set>
+      <if test="paramValue != null">
+        param_value = #{paramValue,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zly.model.ItemParamValue">
+    update tb_item_param_value
+    set param_value = #{paramValue,jdbcType=VARCHAR}
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zly.model.ItemParamValue">
+    <constructor>
+      <idArg column="item_id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <idArg column="param_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="param_value" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    item_id, param_id, param_value
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.zly.model.ItemParamValueKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_item_param_value
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.zly.model.ItemParamValueKey">
+    delete from tb_item_param_value
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zly.model.ItemParamValue">
+    insert into tb_item_param_value (item_id, param_id, param_value
+      )
+    values (#{itemId,jdbcType=BIGINT}, #{paramId,jdbcType=INTEGER}, #{paramValue,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zly.model.ItemParamValue">
+    insert into tb_item_param_value
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="itemId != null">
+        item_id,
+      </if>
+      <if test="paramId != null">
+        param_id,
+      </if>
+      <if test="paramValue != null">
+        param_value,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="itemId != null">
+        #{itemId,jdbcType=BIGINT},
+      </if>
+      <if test="paramId != null">
+        #{paramId,jdbcType=INTEGER},
+      </if>
+      <if test="paramValue != null">
+        #{paramValue,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zly.model.ItemParamValue">
+    update tb_item_param_value
+    <set>
+      <if test="paramValue != null">
+        param_value = #{paramValue,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zly.model.ItemParamValue">
+    update tb_item_param_value
+    set param_value = #{paramValue,jdbcType=VARCHAR}
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.zly.model.itemParamValue">
+    <constructor>
+      <idArg column="item_id" javaType="java.lang.Long" jdbcType="BIGINT" />
+      <idArg column="param_id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="param_value" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    item_id, param_id, param_value
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="com.zly.model.itemParamValueKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_item_param_value
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.zly.model.itemParamValueKey">
+    delete from tb_item_param_value
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zly.model.itemParamValue">
+    insert into tb_item_param_value (item_id, param_id, param_value
+      )
+    values (#{itemId,jdbcType=BIGINT}, #{paramId,jdbcType=INTEGER}, #{paramValue,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zly.model.itemParamValue">
+    insert into tb_item_param_value
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="itemId != null">
+        item_id,
+      </if>
+      <if test="paramId != null">
+        param_id,
+      </if>
+      <if test="paramValue != null">
+        param_value,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="itemId != null">
+        #{itemId,jdbcType=BIGINT},
+      </if>
+      <if test="paramId != null">
+        #{paramId,jdbcType=INTEGER},
+      </if>
+      <if test="paramValue != null">
+        #{paramValue,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zly.model.itemParamValue">
+    update tb_item_param_value
+    <set>
+      <if test="paramValue != null">
+        param_value = #{paramValue,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zly.model.itemParamValue">
+    update tb_item_param_value
+    set param_value = #{paramValue,jdbcType=VARCHAR}
+    where item_id = #{itemId,jdbcType=BIGINT}
+      and param_id = #{paramId,jdbcType=INTEGER}
+  </update>
+</mapper>
