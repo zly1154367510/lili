@@ -14,7 +14,6 @@
     <!--注册切面事务Bean-->
     <bean id="transactionTest" class="com.zly.transaction.transactionTest"/>
 
-    <!--aop设置-->
-   <aop:aspectj-autoproxy/>
+
 
 </beans>

@@ -17,7 +17,9 @@ public class User {
 
     private Date updated;
 
-    public User(Long id, String username, String password, String phone, String email, Date created, Date updated) {
+    private String isBan;
+
+    public User(Long id, String username, String password, String phone, String email, Date created, Date updated,String isBan) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -25,6 +27,15 @@ public class User {
         this.email = email;
         this.created = created;
         this.updated = updated;
+        this.isBan = isBan;
+    }
+
+    public String getIsBan() {
+        return isBan;
+    }
+
+    public void setIsBan(String isBan) {
+        this.isBan = isBan;
     }
 
     public User() {

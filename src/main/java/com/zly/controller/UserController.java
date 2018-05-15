@@ -14,14 +14,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class UserController {
 
-    @Autowired
-    private UserSercice userSercice;
 
-    @RequestMapping("/login")
-    public String login(@RequestParam String username){
-        System.out.println("用户来登陆"+username);
-        User user = userSercice.login(username);
-        System.out.println(user.getPassword());
-        return "item/index";
-    }
 }

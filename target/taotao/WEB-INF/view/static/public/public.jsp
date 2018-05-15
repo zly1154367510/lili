@@ -57,64 +57,8 @@
                     <i class="im-windows8 text-logo-element animated bounceIn"></i><span class="text-logo">spr</span><span class="text-slogan">flat</span>
                 </a>
             </div>
+        </div>
 
-        </div>
-        <!-- Start #header-area -->
-        <div id="header-area" class="fadeInDown">
-            <div class="header-area-inner">
-                <ul class="list-unstyled list-inline">
-                    <li>
-                        <div class="shortcut-button">
-                            <a href="#">
-                                <i class="im-pie"></i>
-                                <span>Earning Stats</span>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="shortcut-button">
-                            <a href="#">
-                                <i class="ec-images color-dark"></i>
-                                <span>Gallery</span>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="shortcut-button">
-                            <a href="#">
-                                <i class="en-light-bulb color-orange"></i>
-                                <span>Fresh ideas</span>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="shortcut-button">
-                            <a href="#">
-                                <i class="ec-link color-blue"></i>
-                                <span>Links</span>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="shortcut-button">
-                            <a href="#">
-                                <i class="ec-support color-red"></i>
-                                <span>Support</span>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="shortcut-button">
-                            <a href="#">
-                                <i class="st-lock color-teal"></i>
-                                <span>Lock area</span>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- End #header-area -->
     </div>
     <!-- Start .header-inner -->
 </div>
@@ -132,6 +76,14 @@
                     </button>
                 </form>
             </li>
+            <li>
+                登录管理 <i class="im-paragraph-justify"></i>
+            </li>
+            <li><a href="http://localhost:8089/admin/login">重新登录 <i class="glyphicon glyphicon-th-list"></i></a>
+            </li>
+            <li><a href="http://localhost:8089/admin/logOut">注销<i class="glyphicon glyphicon-plus"></i></a>
+            </li>
+            <li>
             <li>
                 产品管理 <i class="im-paragraph-justify"></i>
             </li>
@@ -151,7 +103,11 @@
             </li>
             <li><a href="http://localhost:8089/config">参数列表 <i class="glyphicon glyphicon-th-list"></i></a>
 
-
+            <li>
+                用户管理 <i class="im-paragraph-justify"></i>
+            </li>
+            <li><a href="http://localhost:8089/userList">用户列表 <i class="glyphicon glyphicon-th-list"></i></a>
+            <li><a href="http://localhost:8089/config">封禁列表 <i class="glyphicon glyphicon-th-list"></i></a>
 
 
         </ul>

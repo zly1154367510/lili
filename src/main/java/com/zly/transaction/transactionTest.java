@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class transactionTest {
 
     //声明且切面包
-    @Pointcut("execution(* com.zly.service.*.*.*(..))")
+    @Pointcut("execution(* com.zly.controller.*.*.*(..))")
     public void p(){
 
     }

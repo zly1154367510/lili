@@ -33,7 +33,7 @@ public class ConfigController {
     @RequestMapping("/editConfigDo")
     public String EditConifgDo(HttpServletRequest request,Model model){
         int len = Integer.parseInt(request.getParameter("paramNum"));
-        int SuccessNum = 0; 
+        int SuccessNum = 0;
         for (int i=1;i<=len;i++){
             String configValue = request.getParameter(i+"");
             if (configService.updateConfigById(configValue,i)!=0){
