@@ -27,4 +27,7 @@ public interface UserMapper {
 
     @Update("update tb_user set is_ban='是' where id=#{id}")
     int updateById(Long id);
+
+    @Select("select * from tb_user where username=#{username}")
+    List<User> selectByUsername(String username);
 }

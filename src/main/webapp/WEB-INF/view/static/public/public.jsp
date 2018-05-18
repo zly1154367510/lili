@@ -109,6 +109,12 @@
             <li><a href="http://localhost:8089/userList">用户列表 <i class="glyphicon glyphicon-th-list"></i></a>
             <li><a href="http://localhost:8089/config">封禁列表 <i class="glyphicon glyphicon-th-list"></i></a>
 
+            <li>
+                订单管理 <i class="im-paragraph-justify"></i>
+            </li>
+            <li><a href="http://localhost:8089/getOrder">订单列表 <i class="glyphicon glyphicon-th-list"></i></a>
+
+
 
         </ul>
         <!-- End #sideNav -->

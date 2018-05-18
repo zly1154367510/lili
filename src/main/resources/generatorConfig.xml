@@ -67,7 +67,7 @@
         </javaClientGenerator>
 
 
-        <table tableName="tb_ban_user" domainObjectName="BanUser"
+        <table tableName="tb_order" domainObjectName="Order"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">

@@ -1,7 +1,11 @@
 package com.zly.controller;
 
+import com.zly.dao.OrderMapper;
 import com.zly.model.Admin;
+import com.zly.model.Item;
+import com.zly.model.Order;
 import com.zly.service.AdminService;
+import com.zly.service.OrderService;
 import com.zly.service.UserSercice;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created by zly11 on 2018/5/15.
@@ -24,6 +29,9 @@ public class AdminController {
 
     @Autowired
     private UserSercice userSercice;
+
+    @Autowired
+    private OrderService orderService;
 
     @RequestMapping("admin/login")
     public String login(){
@@ -72,6 +80,26 @@ public class AdminController {
         }
         return null;
 
+    }
+
+    @RequestMapping("/getOrder")
+    public String getOrder(@RequestParam(value = "page", required = false, defaultValue = "1") int page, @RequestParam(value = "username", required = false, defaultValue = "") String username,Model model) {
+        //System.out.println(page);
+        List<Order> i = null;
+        long pages = 0;
+        if (username==""||username.equals("")) {
+            i = orderService.getOrderList(page);
+            pages = orderService.getOrderNum() / 10;
+        }else{
+            i = orderService.getOrderListByUsername(username,page);
+            pages = orderService.getOrderNumByUsername(username);
+        }
+        model.addAttribute("list", i);
+        model.addAttribute("pages", pages);
+        model.addAttribute("page", page);
+        model.addAttribute("nextPage", page + 1);
+        model.addAttribute("previousPage", page - 1);
+        return "order/order";
     }
 
 }

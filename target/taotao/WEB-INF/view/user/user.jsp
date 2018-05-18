@@ -161,6 +161,7 @@
             success:function(data){
                 if(data != undefined){
                     alert("成功封禁"+userId);
+                    location.reload([])
                 }
             }
         })
